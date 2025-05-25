@@ -3,6 +3,8 @@ from flask import Flask, request, render_template, send_from_directory, redirect
 from werkzeug.utils import secure_filename
 from processing import process_table_image
 
+[os.makedirs(d, exist_ok=True) for d in ("files", "result_files")]
+
 app = Flask(__name__)
 app.secret_key = "supersecretkey"  # For flashing messages
 
