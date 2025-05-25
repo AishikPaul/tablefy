@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Upload Table Image</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 30px; }
+      .container { border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+      input[type=file] { margin: 15px 0; }
+      button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+      button:hover { background: #0056b3; }
+      .flash { color: red; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Table Image</h2>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash">{{ messages[0] }}</div>
+      {% endif %}
+    {% endwith %}
+    <form action="/" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".png,.jpg,.jpeg,.bmp" required />
+      <br />
+      <button type="submit">Upload and Process</button>
+    </form>
+  </div>
+</body>
+</html>

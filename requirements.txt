@@ -1,0 +1,7 @@
+easyocr
+matplotlib
+pandas
+Flask
+opencv-python
+numpy
+

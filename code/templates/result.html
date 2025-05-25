@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Download CSV</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 30px; text-align: center; }
+      a.download-btn {
+        display: inline-block;
+        padding: 10px 25px;
+        background-color: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      a.download-btn:hover {
+        background-color: #218838;
+      }
+    </style>
+</head>
+<body>
+    <h2>Processing Complete!</h2>
+    <a href="{{ url_for('download_file', filename=csv_file) }}" class="download-btn">Download CSV</a>
+    <br /><br />
+    <a href="{{ url_for('upload_file') }}">Process another image</a>
+</body>
+</html>
