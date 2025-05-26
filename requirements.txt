@@ -4,4 +4,4 @@ pandas
 Flask
 opencv-python
 numpy
-
+gunicorn
